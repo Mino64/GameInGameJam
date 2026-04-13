@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Diagnostics;
+using System.Collections;
 using static UnityEngine.Debug;
 
 
@@ -24,6 +24,7 @@ public class CylceButton : MonoBehaviour
     private float waitTime = 6f;
     private int currentIndex = 0;
     private int randomNum;
+    private Coroutine timer;
 
     void Start()
     {
@@ -38,18 +39,30 @@ public class CylceButton : MonoBehaviour
     {
         currentIndex = (currentIndex + 1) % symbols.Length;
         Log($"Current Index: {currentIndex}");
-        if (currentIndex == randomNum)
+
+        if (timer != null)
         {
-            SceneManager.LoadScene(sceneName);
-            Log($"Changing Scene");
+            StopCoroutine(timer);
+            timer = null;
         }
 
+        if (currentIndex == randomNum)
+        {
+            Log($"Starting timer");
+            timer = StartCoroutine(WaitAndLoad());
+        }
         UpdateSymbol();
     }
 
     void UpdateSymbol()
     {
         display.sprite = symbols[currentIndex];
+    }
+    IEnumerator WaitAndLoad()
+    {
+        yield return new WaitForSeconds(waitTime);
+        Log($"Changing Scene");
+        SceneManager.LoadScene(sceneName);
     }
 
 }
