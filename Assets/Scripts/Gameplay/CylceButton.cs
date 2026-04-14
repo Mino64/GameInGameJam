@@ -6,6 +6,7 @@ using static UnityEngine.Debug;
 
 
 
+
 public class CylceButton : MonoBehaviour
 {
     /// <summary>
@@ -13,32 +14,34 @@ public class CylceButton : MonoBehaviour
     /// </summary>
     [SerializeField]
     private string sceneName;
-
     [SerializeField]
     private Image display;
-
     [SerializeField]
-    private Sprite[] symbols;
-
+    private int symbols = 6;
     [SerializeField]
     private float waitTime = 6f;
+    [SerializeField]
+    private float rotationPerStep;
+
     private int currentIndex = 0;
     private int randomNum;
     private Coroutine timer;
 
     void Start()
     {
-        randomNum = Random.Range(0, symbols.Length);
+        rotationPerStep = 360f / symbols;
+        randomNum = Random.Range(0, symbols);
         Log($"Target index: {randomNum}");
-        UpdateSymbol();
 
 
     }
 
     public void OnButtonPressed()
     {
-        currentIndex = (currentIndex + 1) % symbols.Length;
+        currentIndex = (currentIndex + 1) % symbols;
         Log($"Current Index: {currentIndex}");
+
+        display.transform.rotation = UnityEngine.Quaternion.Euler(0f, 0f, -rotationPerStep*currentIndex);
 
         if (timer != null)
         {
@@ -51,13 +54,8 @@ public class CylceButton : MonoBehaviour
             Log($"Starting timer");
             timer = StartCoroutine(WaitAndLoad());
         }
-        UpdateSymbol();
     }
 
-    void UpdateSymbol()
-    {
-        display.sprite = symbols[currentIndex];
-    }
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(waitTime);

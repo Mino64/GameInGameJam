@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f28ab7edd1153b14d8535c4e7bcb132f
+guid: 466ee932c1d0cbbdfb00e28bbbfc542a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5733398669145087560
-    second: 400background_mainGame_0
+      213: -899384955499037545
+    second: nipple_0
+  - first:
+      213: -1870511040846847044
+    second: nipple_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +100,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +113,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 400background_mainGame_0
+      name: nipple_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 7680
-        height: 4320
+        x: 1024
+        y: 265
+        width: 44
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b1e8e98940ee60b0800000000000000
-      internalID: -5733398669145087560
+      spriteID: 79c362be52eb483f0800000000000000
+      internalID: -899384955499037545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nipple_1
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 301
+        width: 140
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3a0e56e1c9a06e0800000000000000
+      internalID: -1870511040846847044
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: af8dd8ed5da325e6e99f7890721b837b
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      400background_mainGame_0: -5733398669145087560
+      nipple_0: -899384955499037545
+      nipple_1: -1870511040846847044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
