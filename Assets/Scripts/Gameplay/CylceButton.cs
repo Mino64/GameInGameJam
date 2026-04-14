@@ -22,16 +22,17 @@ public class CylceButton : MonoBehaviour
     private float waitTime = 6f;
     [SerializeField]
     private float rotationPerStep;
+    [SerializeField]
+    private int winNum;
+    [SerializeField]
+    private GameObject arrow;
 
-    private int currentIndex = 0;
-    private int randomNum;
     private Coroutine timer;
+    private int currentIndex = 0;
 
     void Start()
     {
         rotationPerStep = 360f / symbols;
-        randomNum = Random.Range(0, symbols);
-        Log($"Target index: {randomNum}");
 
 
     }
@@ -41,7 +42,7 @@ public class CylceButton : MonoBehaviour
         currentIndex = (currentIndex + 1) % symbols;
         Log($"Current Index: {currentIndex}");
 
-        display.transform.rotation = UnityEngine.Quaternion.Euler(0f, 0f, -rotationPerStep*currentIndex);
+        display.transform.rotation = UnityEngine.Quaternion.Euler(0f, 0f, -rotationPerStep * currentIndex);
 
         if (timer != null)
         {
@@ -49,10 +50,15 @@ public class CylceButton : MonoBehaviour
             timer = null;
         }
 
-        if (currentIndex == randomNum)
+        if (currentIndex == winNum)
         {
+            arrow.SetActive(false);
             Log($"Starting timer");
             timer = StartCoroutine(WaitAndLoad());
+        }
+        else
+        {
+            arrow.SetActive(true);
         }
     }
 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d509310a85c17603974341cac00a07b
+guid: 7171d985fe15f21e2a737667fc72cd9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1335728955877104649
-    second: circuloSingular4_0
+      213: -3451699440861859892
+    second: MainMenu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: circuloSingular4_0
+      name: MainMenu_0
       rect:
         serializedVersion: 2
-        x: 1023
-        y: 200
-        width: 350
-        height: 355
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f3edb47799867de0800000000000000
-      internalID: -1335728955877104649
+      spriteID: ccfa30c75a91910d0800000000000000
+      internalID: -3451699440861859892
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      circuloSingular4_0: -1335728955877104649
+      MainMenu_0: -3451699440861859892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
