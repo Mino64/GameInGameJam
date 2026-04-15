@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b7cd9739dc5f02fa061c81e93de25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSequencer
-  zoomedInSize: 5
+  zoomedInSize: 4
   zoomedOutSize: 5
   zoomSpeed: 4
   moveSpeed: 5
