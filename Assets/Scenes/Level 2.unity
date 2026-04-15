@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 87261051}
   - component: {fileID: 87261050}
   - component: {fileID: 87261053}
+  - component: {fileID: 87261054}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -331,6 +332,22 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &87261054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87261049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b7cd9739dc5f02fa061c81e93de25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraSequencer
+  zoomedInSize: 2.5
+  zoomedOutSize: 3
+  zoomSpeed: 4
+  moveSpeed: 5
 --- !u!1 &177112975
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514d15d7e88f7a6edaa2be7771ca0e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CylceButton
-  sceneName: Level 3
   display: {fileID: 177112976}
   symbols: 4
   waitTime: 6
@@ -965,6 +981,83 @@ RectTransform:
   m_AnchoredPosition: {x: 238, y: -96.5}
   m_SizeDelta: {x: 350, y: 475}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &2046804413
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 922326332400083648, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_Name
+      value: PuzzleManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1309.6135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 495.29895
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627501623932247067, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722696081108600524, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: nextScene
+      value: Level 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722696081108600524, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: cameraSequencer
+      value: 
+      objectReference: {fileID: 87261054}
+    - target: {fileID: 5722696081108600524, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: puzzles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722696081108600524, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: 'puzzles.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4132838414903539185}
+    - target: {fileID: 5722696081108600524, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
+      propertyPath: 'puzzles.Array.data[1]'
+      value: 
+      objectReference: {fileID: 226901761}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06edf8588ef4373ffa0098cc984affdd, type: 3}
 --- !u!114 &28651667783628283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,7 +1505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514d15d7e88f7a6edaa2be7771ca0e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CylceButton
-  sceneName: Level 3
   display: {fileID: 4211023704181097584}
   symbols: 4
   waitTime: 6
@@ -1476,7 +1568,7 @@ RectTransform:
   m_GameObject: {fileID: 6631434679853416463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6351575168167474713}
@@ -1487,8 +1579,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4488446747035513609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,7 +1682,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!222 &6043425041551337129
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1684,7 +1776,7 @@ Canvas:
   m_GameObject: {fileID: 6631434679853416463}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1781,3 +1873,4 @@ SceneRoots:
   - {fileID: 87261052}
   - {fileID: 4324540498994532042}
   - {fileID: 334412255}
+  - {fileID: 2046804413}
