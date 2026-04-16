@@ -327,8 +327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.9179688, y: 17.129272}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -361}
+  m_SizeDelta: {x: 480, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336479142
 MonoBehaviour:
@@ -375,8 +375,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 336479145}
-        m_TargetAssemblyTypeName: CylceButton, Assembly-CSharp
-        m_MethodName: OnButtonPressed
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -406,8 +406,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 2557356609837632234, guid: adfe5579c6c21ce49a1afe9e6648c85f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -433,15 +433,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 336479140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 514d15d7e88f7a6edaa2be7771ca0e80, type: 3}
+  m_Script: {fileID: 11500000, guid: bb06124fccf040a08a92bb0783b9b2b1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CylceButton
-  display: {fileID: 673070784}
-  symbols: 6
-  waitTime: 6
-  rotationPerStep: 0
-  winNum: 0
-  arrow: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
+  _sceneName: MainMenu
 --- !u!1 &673070782
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1439269751016821913, guid: cf5a00ec6d063dc42be8b512e6aeda19, type: 3}
+  m_Sprite: {fileID: 867082670707149706, guid: e4251817edfdbde4ca01b8eca257462b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -611,8 +606,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 336479141}
   - {fileID: 673070783}
+  - {fileID: 336479141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -677,7 +672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
