@@ -436,15 +436,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514d15d7e88f7a6edaa2be7771ca0e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CylceButton
-  sceneName: MainMenu
   display: {fileID: 673070784}
-  symbols:
-  - {fileID: -4885298761302449938, guid: 39c3e56f34d4dbddfbbe4e0c38f8d089, type: 3}
-  - {fileID: -9035192108251876050, guid: 326cd37982bdfb1d5ad28ea32612a33a, type: 3}
-  - {fileID: 8957324059118975939, guid: 8b1f379f8fae3fb65ad32c6c43a0d331, type: 3}
-  - {fileID: 532282208441007744, guid: 642ca695876d1ac95ae6be6fcc56406f, type: 3}
-  - {fileID: 6159195685958949571, guid: ad7c5a57cb745f182b969065de5ae9da, type: 3}
-  - {fileID: 2306398013319932181, guid: 8f7ef4ad2010605f28b9cfe8e0a8fbcf, type: 3}
+  symbols: 6
+  waitTime: 6
+  rotationPerStep: 0
+  winNum: 0
+  arrow: {fileID: 0}
 --- !u!1 &673070782
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,8 +476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 117.9}
-  m_SizeDelta: {x: 509.3827, y: 111.3044}
+  m_AnchoredPosition: {x: 0, y: -0.000022888}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &673070784
 MonoBehaviour:
@@ -502,8 +499,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1439269751016821913, guid: cf5a00ec6d063dc42be8b512e6aeda19, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
