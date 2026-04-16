@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb06124fccf040a08a92bb0783b9b2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  _sceneName: Level
+  _sceneName: Tutorial
 --- !u!114 &905362762
 MonoBehaviour:
   m_ObjectHideFlags: 0

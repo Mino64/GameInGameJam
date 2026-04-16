@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [SerializeField] private CylceButton[] puzzles; // drag puzzles in order
+    [SerializeField] private CylceButton[] puzzles;
     [SerializeField] private string nextScene;
     [SerializeField] private CameraSequencer cameraSequencer;
 
@@ -11,12 +11,14 @@ public class PuzzleManager : MonoBehaviour
 
     void Start()
     {
-        // subscribe to each puzzle's solved event
         foreach (var puzzle in puzzles)
             puzzle.OnPuzzleSolved += OnPuzzleSolved;
 
-        // zoom into the first puzzle automatically
-        cameraSequencer.ZoomToPuzzle(puzzles[currentPuzzleIndex].transform.position);
+        // activate the first puzzle with sound immediately
+        puzzles[0].Activate(true);
+
+        if (puzzles.Length > 1)
+            cameraSequencer.ZoomToPuzzle(puzzles[currentPuzzleIndex].transform.position);
     }
 
     void OnPuzzleSolved()
@@ -25,13 +27,15 @@ public class PuzzleManager : MonoBehaviour
 
         if (currentPuzzleIndex >= puzzles.Length)
         {
-            // all puzzles done, load next scene
             SceneManager.LoadScene(nextScene);
         }
         else
         {
-            // move camera to next puzzle
-            cameraSequencer.ZoomToPuzzle(puzzles[currentPuzzleIndex].transform.position);
+            if (puzzles.Length > 1)
+                // activate next puzzle with sound only after camera finishes moving
+                cameraSequencer.ZoomToPuzzle(puzzles[currentPuzzleIndex].transform.position, () => puzzles[currentPuzzleIndex].Activate(true));
+            else
+                puzzles[currentPuzzleIndex].Activate(true);
         }
     }
 

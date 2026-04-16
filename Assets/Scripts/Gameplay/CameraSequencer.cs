@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CameraSequencer : MonoBehaviour
 {
-    [SerializeField] private float zoomedInSize = 3f;   // orthographic size when zoomed into a puzzle
-    [SerializeField] private float zoomedOutSize = 7f;  // orthographic size when showing all puzzles
+    [SerializeField] private float zoomedInSize = 3f;
+    [SerializeField] private float zoomedOutSize = 7f;
     [SerializeField] private float zoomSpeed = 2f;
     [SerializeField] private float moveSpeed = 3f;
 
@@ -14,25 +14,21 @@ public class CameraSequencer : MonoBehaviour
     void Awake()
     {
         cam = GetComponent<Camera>();
-        cam.orthographicSize = zoomedOutSize; // start zoomed out
+        cam.orthographicSize = zoomedOutSize;
     }
 
-    public void ZoomToPuzzle(Vector3 targetPosition)
+    public void ZoomToPuzzle(Vector3 targetPosition, System.Action onComplete = null)
     {
         if (sequence != null) StopCoroutine(sequence);
-        sequence = StartCoroutine(ZoomOutThenIn(targetPosition));
+        sequence = StartCoroutine(ZoomOutThenIn(targetPosition, onComplete));
     }
 
-    IEnumerator ZoomOutThenIn(Vector3 targetPosition)
+    IEnumerator ZoomOutThenIn(Vector3 targetPosition, System.Action onComplete = null)
     {
-        // zoom out
         yield return StartCoroutine(ZoomTo(zoomedOutSize));
-
-        // move to target position (keep camera Z)
         yield return StartCoroutine(MoveTo(new Vector3(targetPosition.x, targetPosition.y, transform.position.z)));
-
-        // zoom in
         yield return StartCoroutine(ZoomTo(zoomedInSize));
+        onComplete?.Invoke();
     }
 
     IEnumerator ZoomTo(float targetSize)
